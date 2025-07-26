@@ -1,0 +1,5 @@
+.git/
+
+libtensorflow-cpu-windows-x86_64/
+
+*.zip
