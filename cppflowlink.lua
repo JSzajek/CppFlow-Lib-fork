@@ -9,7 +9,7 @@ function LinkCppFlow()
 		includedirs
 		{
 			relativeDir .. "/include",
-			relativeDir .. "/libtensorflow-cpu-x86_64/include",
+			relativeDir .. "/libtensorflow-cpu-windows-x86_64/include",
 		}
 		links
 		{
@@ -17,17 +17,17 @@ function LinkCppFlow()
 		}
 		libdirs
 		{
-			relativeDir .. "/libtensorflow-cpu-x86_64/lib"
+			relativeDir .. "/libtensorflow-cpu-windows-x86_64/lib"
 		}
 		postbuildcommands
 		{
-			"{COPY} " .. '"' .. relativeDir .. "/libtensorflow-cpu-x86_64/lib/*.dll" .. '"' .. " %{cfg.targetdir}"
+			"{COPY} " .. '"' .. relativeDir .. "/libtensorflow-cpu-windows-x86_64/lib/*.dll" .. '"' .. " %{cfg.targetdir}"
 		}
 	filter "configurations:Release"
 		includedirs
 		{
 			relativeDir .. "/include",
-			relativeDir .. "/libtensorflow-cpu-x86_64/include",
+			relativeDir .. "/libtensorflow-cpu-windows-x86_64/include",
 		}
 		links
 		{
@@ -35,17 +35,17 @@ function LinkCppFlow()
 		}
 		libdirs
 		{
-			relativeDir .. "/libtensorflow-cpu-x86_64/lib"
+			relativeDir .. "/libtensorflow-cpu-windows-x86_64/lib"
 		}
 		postbuildcommands
 		{
-			"{COPY} " .. '"' .. relativeDir .. "/libtensorflow-cpu-x86_64/lib/*.dll" .. '"' .. " %{cfg.targetdir}"
+			"{COPY} " .. '"' .. relativeDir .. "/libtensorflow-cpu-windows-x86_64/lib/*.dll" .. '"' .. " %{cfg.targetdir}"
 		}
 	filter "configurations:Dist"
 		includedirs
 		{
 			relativeDir .. "/include",
-			relativeDir .. "/libtensorflow-cpu-x86_64/include",
+			relativeDir .. "/libtensorflow-cpu-windows-x86_64/include",
 		}
 		links
 		{
@@ -53,10 +53,10 @@ function LinkCppFlow()
 		}
 		libdirs
 		{
-			relativeDir .. "/libtensorflow-cpu-x86_64/lib"
+			relativeDir .. "/libtensorflow-cpu-windows-x86_64/lib"
 		}
 		postbuildcommands
 		{
-			"{COPY} " .. '"' .. relativeDir .. "/libtensorflow-cpu-x86_64/lib/*.dll" .. '"' .. " %{cfg.targetdir}"
+			"{COPY} " .. '"' .. relativeDir .. "/libtensorflow-cpu-windows-x86_64/lib/*.dll" .. '"' .. " %{cfg.targetdir}"
 		}
 end
