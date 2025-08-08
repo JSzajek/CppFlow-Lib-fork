@@ -22,7 +22,9 @@ Write-Host "Downloading TensorFlow C API $tf_version..."
 New-Item -ItemType Directory -Force -Path $output_dir | Out-Null
 
 # Download TensorFlow ZIP
+$ProgressPreference = 'SilentlyContinue'
 Invoke-WebRequest -Uri $tf_url -OutFile $download_file
+$ProgressPreference = 'Continue'
 
 # Extract the archive
 Expand-Archive -Path $download_file -DestinationPath $output_dir -Force
